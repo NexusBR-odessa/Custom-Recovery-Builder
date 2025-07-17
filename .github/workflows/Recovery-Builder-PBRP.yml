@@ -67,6 +67,13 @@ jobs:
 
     - name: Cleanup
       uses: rokibhasansagar/slimhub_actions@main
+
+- name: Build zopflipng
+  run: |
+    git clone https://github.com/google/zopfli.git
+    cd zopfli
+    make zopflipng -j$(nproc)
+    sudo cp zopflipng /usr/local/bin/
       
     - name: Set Swap Space
       uses: pierotofy/set-swap-space@master

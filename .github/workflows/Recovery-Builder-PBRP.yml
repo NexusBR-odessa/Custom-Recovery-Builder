@@ -135,7 +135,7 @@ jobs:
         cd android-recovery
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
-        lunch pb_odessa-eng && mka pbrp
+        lunch omni_odessa-eng && mka pbrp
       
     - name: Set Build Date # Output will be use in Release
       run: |
